@@ -82,21 +82,21 @@ svg text  {
     transform: scale(1.2);
   }
 }
-.icon-email {
+.i-email {
   @include icon('\e600');
 }
-.icon-linkedin  {
+.i-linkedin  {
   @include icon('\eac9');
 }
-.icon-github  {
+.i-github  {
   @include icon('\eab2');
 }
-.icon-dribbble  {
+.i-dribbble  {
   @include icon('\eaa6');
 }
-.icon-instagram  {
+.i-instagram  {
   @include icon('\ea90');
 }
-.icon-lastfm  {
+.i-lastfm  {
   @include icon('\eaca');
 }
