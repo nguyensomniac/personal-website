@@ -1,0 +1,121 @@
+$max-width: 60rem; //960px
+$column-num: 12;
+$padding: 1.75rem;
+
+
+//grid styles
+[class*='column'] {
+  //common column styles
+  box-sizing: border-box;
+  float: left;
+  padding-right: $padding;
+}
+[class*='column']:last-of-type  {
+  padding: 0;
+}
+@for $i from 1 through $column-num  {
+  .column-#{$i} {
+    width: 100% / $column-num * $i;
+  }
+  @media screen and (min-width: 43.75rem)  {
+    .column-dt-#{$i}  {
+      width: 100% / $column-num * $i;
+    }
+  }
+}
+//Row clearfix
+.row:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+.container {
+  max-width: $max-width;
+  width: 95%;
+  margin: auto;
+}
+.container img  {
+  max-width: 100%;
+  width: auto;
+}
+//set body and HTML to full height
+body, html  {
+  height: 100%;
+}
+.fullsize {
+  height: 100%;
+}
+//only works for block elements
+.vertically-aligned {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.horizontally-aligned {
+  text-align: center;
+}
+//inline lists for header and footer
+header ul, footer ul  {
+  margin: 0;
+  padding: 0;
+}
+header li, footer li  {
+  list-style-type: none;
+  display: inline;
+}
+.header-main  {
+  width: 100%;
+  padding: 1.5rem 0;
+  position: fixed;
+  z-index: 1;
+}
+.header-main li h4 {
+  padding-left: .75rem;
+  display: inline;
+}
+.nav-left  {
+  float: left;
+}
+.nav-right {
+  float: right;
+}
+
+.padded-section {
+  padding: 4rem 0;
+}
+
+//compensate for fixed header
+.vertical-offset  {
+  padding-top: 7.5rem;
+}
+
+.work-card  {
+  padding-top: 33.3%;
+  background-position: center;
+  background-size: 100%;
+  transition: background-size 400ms ease;
+  margin: 3rem 0;
+  display: block;
+}
+.work-card:hover  {
+  background-size: 105%;
+}
+.work-card-header {
+  bottom: 0;
+  padding: 1rem 2rem;
+  display: inline-block;
+}
+.work-overlay {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+//footer
+.footer-main  {
+  text-align: center;
+}
+.footer-icons {
+  margin: .75rem 0;
+}

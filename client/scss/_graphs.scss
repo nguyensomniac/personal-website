@@ -1,0 +1,35 @@
+.about-graphs svg {
+  margin: .75rem 0;
+}
+.music-7day-graph text *  {
+  dominant-baseline: text-before-edge;
+}
+.music-7day-bar {
+  fill: $accent-dark;
+  &:hover {
+    fill: #000000;
+  }
+}
+.music-7day-artist  {
+  font-weight: 700;
+}
+.insta-graph svg  {
+  overflow: visible;
+}
+.insta-line {
+  fill: none;
+  stroke-width: 5;
+  stroke: $accent-dark;
+}
+.insta-point *  {
+  cursor: pointer;
+}
+.insta-point-solid {
+  stroke: $accent-dark;
+  fill: white;
+}
+.insta-point text {
+  font-size: 12px;
+  dominant-baseline: central;
+  font-weight: 600;
+}
