@@ -1,7 +1,7 @@
 if (Meteor.isServer) {
   Meteor.startup(function () {
       if(process.env.METEOR_ENV = 'production') {
-        Meteor.settings = settings;
+        Meteor.settings = process.env.METEOR_SETTINGS;
       }
       console.log()
       console.log(process.env);
