@@ -1,7 +1,7 @@
 if (Meteor.isServer) {
   Meteor.startup(function () {
       if(process.env.METEOR_ENV = 'production') {
-        var settings = require('/app/settings.json');
+        var settings = Meteor.http.get(Meteor.absoluteUrl("/app/settings.json")).data;
         Meteor.settings = settings;
       }
       console.log()
