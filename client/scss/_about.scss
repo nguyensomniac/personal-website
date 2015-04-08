@@ -6,3 +6,8 @@
   border-radius: 50%;
   margin-top: 1rem;
 }
+.about-stats  {
+  @media screen and (max-width: 480px)  {
+    display: none;
+  }
+}
