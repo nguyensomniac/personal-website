@@ -13,10 +13,13 @@ $padding: 1.75rem;
 [class*='column']:last-of-type  {
   padding: 0;
 }
+
 @for $i from 1 through $column-num  {
   .column-#{$i} {
     width: 100% / $column-num * $i;
   }
+}
+@for $i from 1 through $column-num  {
   @media screen and (min-width: 43.75rem)  {
     .column-dt-#{$i}  {
       width: 100% / $column-num * $i;

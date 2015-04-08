@@ -128,11 +128,11 @@ if(Meteor.isClient) {
       iChartAFill.append('stop')
         .attr('offset', '0%')
         .attr('stop-color', d3.rgb(d3.select('.insta-line').style('stroke')))
-        .attr('stop-opacity', 1);
+        .attr('stop-opacity', .3);
       iChartAFill.append('stop')
         .attr('offset', '100%')
         .attr('stop-color', d3.rgb(d3.select('.insta-line').style('stroke')))
-        .attr('stop-opacity', 0);
+        .attr('stop-opacity', .7);
       //create area under graph
       var likeArea = d3.svg.area()
         //x and y1 are identical to line, y0 is bottom of graph

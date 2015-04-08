@@ -23,8 +23,11 @@ h1, h2, h3, h4, h5, h6  {
   font-weight: 500;
 }
 h1  {
-  font-size: $h1-size;
+  font-size: $h2-size;
   font-weight: 300;
+  @media screen and (min-width: 43.75rem)  {
+    font-size: $h1-size;
+  }
 }
 h2  {
   font-size: $h2-size;
