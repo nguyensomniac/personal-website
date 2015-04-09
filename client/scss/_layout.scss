@@ -92,7 +92,7 @@ header li, footer li  {
 .vertical-offset  {
   padding-top: 7.5rem;
 }
-
+//work cards on main page
 .work-card  {
   padding-top: 33.3%;
   background-position: center;
@@ -115,6 +115,26 @@ header li, footer li  {
   width: 100%;
 }
 
+//work page
+.work-page img  {
+  display: block;
+  margin: auto;
+}
+
+//about page
+.about-photo  {
+  width: 100%;
+  padding-top: 100%;
+  background-image: url('./assets/img/self.jpg');
+  background-size: cover;
+  border-radius: 50%;
+  margin-top: 1rem;
+}
+.about-stats  {
+  @media screen and (max-width: 480px)  {
+    display: none;
+  }
+}
 //footer
 .footer-main  {
   text-align: center;
