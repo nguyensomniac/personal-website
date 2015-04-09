@@ -6,5 +6,9 @@
   {
     index: 2,
     title: 'Scalable Press',
+  },
+  {
+    index: 3,
+    title: 'Branch Metrics Dashboard',
   }
 ]
