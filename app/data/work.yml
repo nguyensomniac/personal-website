@@ -1,0 +1,7 @@
+projects:
+  - title: 'Miscellaneous Illustrations'
+    location: '/projects/misc-illustrations.md'
+  - title: 'Scalable Press'
+    location: '/projects/misc-illustrations.md'
+  - title: 'Branch Metrics Dashboard'
+    location: '/projects/branch-metrics.md'
