@@ -47,15 +47,15 @@ h5  {
   letter-spacing: 1px;
   font-weight: 700;
 }
-header  {
-}
-a {
+a,
+.link {
   text-decoration: underline;
   &:hover {
     text-decoration: none;
   }
 }
-.light a, p a  {
+.light a,
+p a  {
   font-weight: 700;
 }
 .colorful a {

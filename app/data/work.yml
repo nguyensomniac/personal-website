@@ -1,7 +1,10 @@
 projects:
   - title: 'Miscellaneous Illustrations'
-    location: '/projects/misc-illustrations.md'
+    location: 'source/work/misc-illustrations.md'
+    image: '/img/doelibrary.png'
   - title: 'Scalable Press'
-    location: '/projects/misc-illustrations.md'
+    location: 'source/work/scalable-press.md'
+    image: '/img/work-2.png'
   - title: 'Branch Metrics Dashboard'
-    location: '/projects/branch-metrics.md'
+    location: 'source/work/branch-metrics.md'
+    image: '/img/work-3.png'

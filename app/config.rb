@@ -27,7 +27,13 @@
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
+data.work.projects.each do |project|
+  project_url = project.title.gsub(/\s/, '-').downcase
+  proxy "/projects/#{project_url}.html", "/work.html", :locals => {:project => project}
+end
 
+#ignore pages
+ignore "/work/*"
 ###
 # Helpers
 ###
@@ -41,18 +47,22 @@
 # end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def markdown(src)
+    output = Tilt['markdown'].new(src).render
+  end
+  def make_url(title)
+    title.gsub(/\s/, '-').downcase
+  end
+end
 
 set :css_dir, 'css'
 
-set :js_dir, 'javascripts'
+set :js_dir, 'js'
 
 set :images_dir, 'img'
 
+activate :directory_indexes
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -70,3 +80,9 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+#sprockets
+#enable bower
+sprockets.append_path File.join root, 'bower_components'
+sprockets.import_asset 'jquery/dist/jquery.js'
+sprockets.import_asset 'd3/d3.js'
