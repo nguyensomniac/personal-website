@@ -1,5 +1,5 @@
 ---
-title: Welcome to Middleman
+title: Lily Nguyen | Nguyensomniac
 ---
 
 <div class="fullsize intro row colorful">
@@ -9,7 +9,7 @@ title: Welcome to Middleman
 <div id="work" class="row container padded-section light">
   <h2>Work</h2>
   <% data.work.projects.each do |project| %>
-    <a href="/projects/<%= make_url project.title %>" class="work-card" style="background-image: url('<%= project.image %>');">
+    <a href="./projects/<%= make_url project.title %>" class="work-card" style="background-image: url('./<%= project.image %>');">
       <div class="work-overlay">
         <h3 class="work-card-header colorful">
           <div class="link"><%= project.title %></div>
