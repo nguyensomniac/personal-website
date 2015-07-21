@@ -7,10 +7,10 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || title + " | Nguyensomniac" || "Nguyensomniac" %></title>
+    <title><%= current_page.data.title || "Nguyensomniac" %></title>
 
     <!-- Description -->
-    <meta name="description" content=<%=current_page.data.description || description || "Lily Nguyen is a web designer and developer available for hire based in Berkeley, CA." %> />
+    <meta name="description" content=<%= current_page.data.description || "Lily Nguyen is a web designer and developer available for hire based in Berkeley, CA." %> />
 
     <%= stylesheet_link_tag "main" %>
     <%= javascript_include_tag  "all" %>

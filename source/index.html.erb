@@ -9,13 +9,19 @@ description: Lily Nguyen is a web designer and developer available for hire base
 </div>
 <div id="work" class="row container padded-section light">
   <h2>Work</h2>
-  <% data.work.projects.each do |project| %>
-    <a href="./projects/<%= make_url project.title %>" class="work-card" style="background-image: url('./<%= project.image %>');">
-      <div class="work-overlay">
-        <h3 class="work-card-header colorful">
-          <div class="link"><%= project.title %></div>
-        </h3>
-      </div>
-    </a>
-  <% end %>
+  <div>
+    <% sitemap.resources.select{ |r| r.path.start_with? 'projects/'}.each do |project| %>
+      <% link_to project.path do %>
+        <div class="work-card" style="background-image: url('./<%= project.metadata[:page]["image"] %>')">
+          <div class="work-overlay">
+            <h3 class="work-card-header colorful">
+              <div class="link">
+                <%= project.metadata[:page]["title"] %>
+              </div>
+            </h3>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
