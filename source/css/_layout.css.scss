@@ -4,14 +4,18 @@ $padding: 1.75rem;
 
 
 //grid styles
+.row  {
+  @include clearfix;
+  margin-left: $padding * -.5;
+  margin-right: $padding * -.5;
+}
+
 [class*='column'] {
   //common column styles
   box-sizing: border-box;
   float: left;
-  padding-right: $padding;
-}
-[class*='column']:last-of-type  {
-  padding: 0;
+  padding-right: $padding * .5;
+  padding-left: $padding * .5;
 }
 
 @for $i from 1 through $column-num  {
@@ -26,11 +30,9 @@ $padding: 1.75rem;
     }
   }
 }
-//Row clearfix
-.row:after {
-  content:"";
-  display:table;
-  clear:both;
+
+.clearfix {
+  @include clearfix;
 }
 
 .container {

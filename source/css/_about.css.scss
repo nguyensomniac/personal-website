@@ -1,13 +1,14 @@
 .about-photo  {
-  width: 100%;
-  padding-top: 100%;
+  width: 25%;
+  padding-top: 25%;
   background-image: url('../img/self.jpg');
   background-size: cover;
   border-radius: 50%;
-  margin-top: 1rem;
-}
-.about-stats  {
-  @media screen and (max-width: 480px)  {
-    display: none;
+  margin: auto;
+  margin-bottom: 1rem;
+  @media screen and (min-width: 43.75rem)  {
+    width: 100%;
+    padding-top: 100%;
+    margin-top: 1rem;
   }
 }

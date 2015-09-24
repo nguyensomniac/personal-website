@@ -20,20 +20,20 @@
 # page "/path/to/file.html", :layout => :otherlayout
 #
 # A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
+with_layout :projects do
+  page "/projects/*"
+end
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
-data.work.projects.each do |project|
-  project_url = project.title.gsub(/\s/, '-').downcase
-  proxy "/projects/#{project_url}.html", "/work.html", :locals => {:project => project, :title => project.title}, :ignore => true
-end
+# data.work.projects.each do |project|
+#   project_url = project.title.gsub(/\s/, '-').downcase
+#   proxy "/projects/#{project_url}.html", "/work.html", :locals => {:project => project, :title => project.title}, :ignore => true
+# end
 
 #ignore pages
-ignore "/work/*"
+# ignore ""
 ###
 # Helpers
 ###
@@ -48,12 +48,6 @@ ignore "/work/*"
 
 # Methods defined in the helpers block are available in templates
 helpers do
-  def markdown(src)
-    output = Tilt['markdown'].new(src).render
-  end
-  def make_url(title)
-    title.gsub(/\s/, '-').downcase
-  end
 end
 
 set :css_dir, 'css'
