@@ -610,185 +610,192 @@ body {
     color: #FFFFFF; }
 
 /* line 7, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+.row {
+  margin-left: -0.875rem;
+  margin-right: -0.875rem; }
+  /* line 2, /Users/lily/programming/nguyensomniac/source/css/_util.scss */
+  .row:after {
+    content: '';
+    display: table;
+    clear: both; }
+
+/* line 13, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 [class*='column'] {
   box-sizing: border-box;
   float: left;
-  padding-right: 1.75rem; }
+  padding-right: 0.875rem;
+  padding-left: 0.875rem; }
 
-/* line 13, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
-[class*='column']:last-of-type {
-  padding: 0; }
-
-/* line 18, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 22, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .column-1 {
   width: 8.33333%; }
 
-/* line 18, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 22, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .column-2 {
   width: 16.66667%; }
 
-/* line 18, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 22, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .column-3 {
   width: 25%; }
 
-/* line 18, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 22, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .column-4 {
   width: 33.33333%; }
 
-/* line 18, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 22, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .column-5 {
   width: 41.66667%; }
 
-/* line 18, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 22, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .column-6 {
   width: 50%; }
 
-/* line 18, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 22, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .column-7 {
   width: 58.33333%; }
 
-/* line 18, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 22, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .column-8 {
   width: 66.66667%; }
 
-/* line 18, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 22, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .column-9 {
   width: 75%; }
 
-/* line 18, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 22, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .column-10 {
   width: 83.33333%; }
 
-/* line 18, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 22, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .column-11 {
   width: 91.66667%; }
 
-/* line 18, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 22, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .column-12 {
   width: 100%; }
 
 @media screen and (min-width: 43.75rem) {
-  /* line 24, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+  /* line 28, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
   .column-dt-1 {
     width: 8.33333%; } }
 @media screen and (min-width: 43.75rem) {
-  /* line 24, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+  /* line 28, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
   .column-dt-2 {
     width: 16.66667%; } }
 @media screen and (min-width: 43.75rem) {
-  /* line 24, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+  /* line 28, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
   .column-dt-3 {
     width: 25%; } }
 @media screen and (min-width: 43.75rem) {
-  /* line 24, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+  /* line 28, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
   .column-dt-4 {
     width: 33.33333%; } }
 @media screen and (min-width: 43.75rem) {
-  /* line 24, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+  /* line 28, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
   .column-dt-5 {
     width: 41.66667%; } }
 @media screen and (min-width: 43.75rem) {
-  /* line 24, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+  /* line 28, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
   .column-dt-6 {
     width: 50%; } }
 @media screen and (min-width: 43.75rem) {
-  /* line 24, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+  /* line 28, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
   .column-dt-7 {
     width: 58.33333%; } }
 @media screen and (min-width: 43.75rem) {
-  /* line 24, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+  /* line 28, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
   .column-dt-8 {
     width: 66.66667%; } }
 @media screen and (min-width: 43.75rem) {
-  /* line 24, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+  /* line 28, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
   .column-dt-9 {
     width: 75%; } }
 @media screen and (min-width: 43.75rem) {
-  /* line 24, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+  /* line 28, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
   .column-dt-10 {
     width: 83.33333%; } }
 @media screen and (min-width: 43.75rem) {
-  /* line 24, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+  /* line 28, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
   .column-dt-11 {
     width: 91.66667%; } }
 @media screen and (min-width: 43.75rem) {
-  /* line 24, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+  /* line 28, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
   .column-dt-12 {
     width: 100%; } }
-/* line 30, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
-.row:after {
-  content: "";
+/* line 2, /Users/lily/programming/nguyensomniac/source/css/_util.scss */
+.clearfix:after {
+  content: '';
   display: table;
   clear: both; }
 
-/* line 36, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 38, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .container {
   max-width: 60rem;
   width: 95%;
   margin: auto; }
 
-/* line 41, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 43, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .container img {
   max-width: 100%;
   width: auto; }
 
-/* line 46, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 48, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 body, html {
   height: 100%; }
 
-/* line 49, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 51, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .fullsize {
   height: 100%; }
 
-/* line 53, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 55, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .vertically-aligned {
   position: relative;
   top: 50%;
   transform: translateY(-50%); }
 
-/* line 58, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 60, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .horizontally-aligned {
   text-align: center; }
 
-/* line 62, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 64, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 header ul, footer ul {
   margin: 0;
   padding: 0; }
 
-/* line 66, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 68, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 header li, footer li {
   list-style-type: none;
   display: inline; }
 
-/* line 70, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 72, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .header-main {
   width: 100%;
   padding: 1.5rem 0;
   position: fixed;
   z-index: 1; }
 
-/* line 76, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 78, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .header-main li h4 {
   padding-left: .75rem;
   display: inline; }
 
-/* line 80, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 82, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .nav-left {
   float: left; }
 
-/* line 83, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 85, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .nav-right {
   float: right; }
 
-/* line 87, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 89, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .padded-section {
   padding: 4rem 0; }
 
-/* line 92, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 94, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .vertical-offset {
   padding-top: 7.5rem; }
 
-/* line 96, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 98, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .work-card {
   padding-top: 33.3%;
   background-position: center;
@@ -797,28 +804,28 @@ header li, footer li {
   margin: 3rem 0;
   display: block; }
 
-/* line 104, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 106, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .work-card:hover {
   background-size: 105%; }
 
-/* line 107, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 109, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .work-card-header {
   bottom: 0;
   padding: 1rem 2rem;
   display: inline-block; }
 
-/* line 112, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 114, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .work-overlay {
   position: relative;
   height: 100%;
   width: 100%; }
 
-/* line 119, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 121, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .work-page img {
   display: block;
   margin: auto; }
 
-/* line 125, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 127, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .about-photo {
   width: 100%;
   padding-top: 100%;
@@ -828,31 +835,33 @@ header li, footer li {
   margin-top: 1rem; }
 
 @media screen and (max-width: 480px) {
-  /* line 133, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+  /* line 135, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
   .about-stats {
     display: none; } }
 
-/* line 139, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 141, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .footer-main {
   text-align: center; }
 
-/* line 142, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 144, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .footer-icons {
   margin: .75rem 0; }
 
 /* line 1, /Users/lily/programming/nguyensomniac/source/css/_about.css.scss */
 .about-photo {
-  width: 100%;
-  padding-top: 100%;
+  width: 25%;
+  padding-top: 25%;
   background-image: url("../img/self.jpg");
   background-size: cover;
   border-radius: 50%;
-  margin-top: 1rem; }
-
-@media screen and (max-width: 480px) {
-  /* line 9, /Users/lily/programming/nguyensomniac/source/css/_about.css.scss */
-  .about-stats {
-    display: none; } }
+  margin: auto;
+  margin-bottom: 1rem; }
+  @media screen and (min-width: 43.75rem) {
+    /* line 1, /Users/lily/programming/nguyensomniac/source/css/_about.css.scss */
+    .about-photo {
+      width: 100%;
+      padding-top: 100%;
+      margin-top: 1rem; } }
 
 /* line 1, /Users/lily/programming/nguyensomniac/source/css/_graphs.css.scss */
 .about-graphs svg {
