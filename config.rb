@@ -48,6 +48,9 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
+  def make_url(title)
+    title.gsub(/\s/, '-').downcase
+  end
 end
 
 set :css_dir, 'css'
