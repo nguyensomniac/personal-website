@@ -778,14 +778,18 @@ header li, footer li {
   float: right; }
 
 /* line 87, ../stylesheets/scss/_layout.scss */
-.padded-section {
+.padding-small {
+  padding: 1.5rem 0; }
+
+/* line 91, ../stylesheets/scss/_layout.scss */
+.padding-large {
   padding: 4rem 0; }
 
-/* line 92, ../stylesheets/scss/_layout.scss */
+/* line 96, ../stylesheets/scss/_layout.scss */
 .vertical-offset {
   padding-top: 7.5rem; }
 
-/* line 96, ../stylesheets/scss/_layout.scss */
+/* line 100, ../stylesheets/scss/_layout.scss */
 .work-card {
   padding-top: 33.3%;
   background-position: center;
@@ -794,28 +798,28 @@ header li, footer li {
   margin: 3rem 0;
   display: block; }
 
-/* line 104, ../stylesheets/scss/_layout.scss */
+/* line 108, ../stylesheets/scss/_layout.scss */
 .work-card:hover {
   background-size: 105%; }
 
-/* line 107, ../stylesheets/scss/_layout.scss */
+/* line 111, ../stylesheets/scss/_layout.scss */
 .work-card-header {
   bottom: 0;
   padding: 1rem 2rem;
   display: inline-block; }
 
-/* line 112, ../stylesheets/scss/_layout.scss */
+/* line 116, ../stylesheets/scss/_layout.scss */
 .work-overlay {
   position: relative;
   height: 100%;
   width: 100%; }
 
-/* line 119, ../stylesheets/scss/_layout.scss */
+/* line 123, ../stylesheets/scss/_layout.scss */
 .work-page img {
   display: block;
   margin: auto; }
 
-/* line 125, ../stylesheets/scss/_layout.scss */
+/* line 129, ../stylesheets/scss/_layout.scss */
 .about-photo {
   width: 100%;
   padding-top: 100%;
@@ -825,15 +829,15 @@ header li, footer li {
   margin-top: 1rem; }
 
 @media screen and (max-width: 480px) {
-  /* line 133, ../stylesheets/scss/_layout.scss */
+  /* line 137, ../stylesheets/scss/_layout.scss */
   .about-stats {
     display: none; } }
 
-/* line 139, ../stylesheets/scss/_layout.scss */
+/* line 143, ../stylesheets/scss/_layout.scss */
 .footer-main {
   text-align: center; }
 
-/* line 142, ../stylesheets/scss/_layout.scss */
+/* line 146, ../stylesheets/scss/_layout.scss */
 .footer-icons {
   margin: .75rem 0; }
 

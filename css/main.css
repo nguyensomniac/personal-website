@@ -408,72 +408,80 @@ th {
   src: url("../fonts/icomoon/icomoon.eot?#iefixaddf79") format("embedded-opentype"), url("../fonts/icomoon/icomoon.woff?addf79") format("woff"), url("../fonts/icomoon/icomoon.ttf?addf79") format("truetype"), url("../fonts/icomoon/icomoon.svg?addf79#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
-/* line 15, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 17, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 body {
   font-family: "Source Sans Pro", "Helvetica Neue", sans-serif;
   line-height: 1.7;
-  font-size: 1.125rem; }
+  font-size: 1.125rem;
+  font-weight: 300; }
 
-/* line 20, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 23, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
   margin: 0;
   font-weight: 500; }
 
-/* line 25, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 28, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 h1 {
   font-size: 2.625rem;
   font-weight: 300; }
   @media screen and (min-width: 43.75rem) {
-    /* line 25, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+    /* line 28, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
     h1 {
       font-size: 4.5rem; } }
 
-/* line 32, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 35, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 h2 {
   font-size: 2.625rem;
   font-weight: 300; }
 
-/* line 36, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 39, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 h3 {
   font-size: 1.875rem;
-  font-weight: 300; }
+  font-weight: 700; }
 
-/* line 40, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 43, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 h4 {
   font-size: 1.125rem;
   font-weight: 500; }
 
-/* line 44, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 47, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 h5 {
   font-size: 1.125rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700; }
 
-/* line 50, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 53, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 a,
 .link {
   text-decoration: underline; }
-  /* line 53, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 56, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   a:hover,
   .link:hover {
     text-decoration: none; }
 
-/* line 57, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 60, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 .light a,
 p a {
   font-weight: 700; }
 
-/* line 61, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 64, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 .colorful a {
   font-weight: inherit; }
 
-/* line 64, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
-svg text {
-  font-size: 0.875rem; }
+/* line 69, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+.button {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .125em; }
 
-/* line 88, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 75, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+.button-small {
+  font-size: 1rem;
+  letter-spacing: .0675em; }
+
+/* line 100, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 .i-email {
   display: inline-block;
   vertical-align: middle;
@@ -484,16 +492,16 @@ svg text {
   line-height: 1;
   text-decoration: none;
   transition: all 300ms ease; }
-  /* line 79, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 91, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-email::after {
     font-family: "Icomoon";
     font-size: 1.5rem;
     content: ""; }
-  /* line 84, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 96, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-email:hover {
     transform: scale(1.2); }
 
-/* line 91, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 103, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 .i-linkedin {
   display: inline-block;
   vertical-align: middle;
@@ -504,16 +512,16 @@ svg text {
   line-height: 1;
   text-decoration: none;
   transition: all 300ms ease; }
-  /* line 79, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 91, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-linkedin::after {
     font-family: "Icomoon";
     font-size: 1.5rem;
     content: ""; }
-  /* line 84, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 96, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-linkedin:hover {
     transform: scale(1.2); }
 
-/* line 94, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 106, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 .i-github {
   display: inline-block;
   vertical-align: middle;
@@ -524,16 +532,16 @@ svg text {
   line-height: 1;
   text-decoration: none;
   transition: all 300ms ease; }
-  /* line 79, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 91, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-github::after {
     font-family: "Icomoon";
     font-size: 1.5rem;
     content: ""; }
-  /* line 84, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 96, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-github:hover {
     transform: scale(1.2); }
 
-/* line 97, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 109, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 .i-dribbble {
   display: inline-block;
   vertical-align: middle;
@@ -544,16 +552,16 @@ svg text {
   line-height: 1;
   text-decoration: none;
   transition: all 300ms ease; }
-  /* line 79, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 91, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-dribbble::after {
     font-family: "Icomoon";
     font-size: 1.5rem;
     content: ""; }
-  /* line 84, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 96, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-dribbble:hover {
     transform: scale(1.2); }
 
-/* line 100, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 112, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 .i-instagram {
   display: inline-block;
   vertical-align: middle;
@@ -564,16 +572,16 @@ svg text {
   line-height: 1;
   text-decoration: none;
   transition: all 300ms ease; }
-  /* line 79, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 91, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-instagram::after {
     font-family: "Icomoon";
     font-size: 1.5rem;
     content: ""; }
-  /* line 84, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 96, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-instagram:hover {
     transform: scale(1.2); }
 
-/* line 103, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 115, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 .i-lastfm {
   display: inline-block;
   vertical-align: middle;
@@ -584,28 +592,33 @@ svg text {
   line-height: 1;
   text-decoration: none;
   transition: all 300ms ease; }
-  /* line 79, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 91, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-lastfm::after {
     font-family: "Icomoon";
     font-size: 1.5rem;
     content: ""; }
-  /* line 84, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 96, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-lastfm:hover {
     transform: scale(1.2); }
 
-/* line 6, /Users/lily/programming/nguyensomniac/source/css/_color.css.scss */
-body {
-  background: #fafafa;
-  color: #222; }
-  /* line 9, /Users/lily/programming/nguyensomniac/source/css/_color.css.scss */
-  body a {
-    color: #17DA97; }
-
 /* line 13, /Users/lily/programming/nguyensomniac/source/css/_color.css.scss */
-.colorful {
-  background-color: #17DA97;
-  color: #FFFFFF; }
+body {
+  background: #F8F8F8;
+  color: #222; }
   /* line 16, /Users/lily/programming/nguyensomniac/source/css/_color.css.scss */
+  body a {
+    color: #16CDA6; }
+
+/* line 21, /Users/lily/programming/nguyensomniac/source/css/_color.css.scss */
+.white-panel {
+  background-color: white;
+  color: #222; }
+
+/* line 26, /Users/lily/programming/nguyensomniac/source/css/_color.css.scss */
+.colorful {
+  background-color: #00E0B0;
+  color: #FFFFFF; }
+  /* line 29, /Users/lily/programming/nguyensomniac/source/css/_color.css.scss */
   .colorful a {
     color: #FFFFFF; }
 
@@ -770,62 +783,76 @@ header li, footer li {
 /* line 72, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .header-main {
   width: 100%;
-  padding: 1.5rem 0;
   position: fixed;
   z-index: 1; }
 
-/* line 78, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 77, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .header-main li h4 {
   padding-left: .75rem;
   display: inline; }
 
-/* line 82, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 81, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .nav-left {
   float: left; }
 
-/* line 85, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 84, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .nav-right {
   float: right; }
 
-/* line 89, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
-.padded-section {
+/* line 88, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+.padding-small {
+  padding: 1.5rem 0; }
+
+/* line 92, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+.padding-large {
   padding: 4rem 0; }
 
-/* line 94, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 96, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+.padding-xl {
+  padding: 6rem 0; }
+  @media screen and (min-width: 43.75rem) {
+    /* line 96, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+    .padding-xl {
+      padding: 8rem 0; } }
+
+/* line 105, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .vertical-offset {
   padding-top: 7.5rem; }
 
-/* line 98, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
-.work-card {
-  padding-top: 33.3%;
-  background-position: center;
-  background-size: 100%;
-  transition: background-size 400ms ease;
-  margin: 3rem 0;
-  display: block; }
-
-/* line 106, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
-.work-card:hover {
-  background-size: 105%; }
-
 /* line 109, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
-.work-card-header {
-  bottom: 0;
-  padding: 1rem 2rem;
-  display: inline-block; }
+.work-card {
+  display: block;
+  margin: 1rem 0;
+  box-shadow: .125rem .1825rem #DFDFDF, .0625rem .125rem #DFDFDF, 0rem .0625rem #DFDFDF;
+  transition: all 200ms ease; }
 
-/* line 114, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
-.work-overlay {
-  position: relative;
-  height: 100%;
-  width: 100%; }
+/* line 116, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+.work-card:hover {
+  transform: translate(0.0625rem, 0.1825rem);
+  box-shadow: 0 0 #DFDFDF, 0 0 #DFDFDF, 0 0 #DFDFDF; }
 
 /* line 121, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+.work-card a {
+  color: inherit;
+  text-decoration: none; }
+
+/* line 125, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+.work-image {
+  width: 100%;
+  padding-top: 75%;
+  background-position: center;
+  background-size: cover; }
+
+/* line 131, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+.work-section {
+  padding: 1rem; }
+
+/* line 136, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .work-page img {
   display: block;
   margin: auto; }
 
-/* line 127, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 142, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .about-photo {
   width: 100%;
   padding-top: 100%;
@@ -835,17 +862,63 @@ header li, footer li {
   margin-top: 1rem; }
 
 @media screen and (max-width: 480px) {
-  /* line 135, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+  /* line 150, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
   .about-stats {
     display: none; } }
 
-/* line 141, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
-.footer-main {
-  text-align: center; }
+/* line 156, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+.footer-left {
+  float: left; }
 
-/* line 144, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 159, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+.footer-right {
+  float: right; }
+
+/* line 162, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .footer-icons {
   margin: .75rem 0; }
+
+/* line 1, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
+.button {
+  border: .1875rem solid currentColor;
+  border-radius: .4375rem;
+  margin: 0 .25rem;
+  display: inline-block; }
+
+/* line 8, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
+.button-group {
+  margin-left: -.25rem;
+  margin-right: -.25rem; }
+
+/* line 13, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
+.button-small {
+  border-width: .0675rem;
+  padding: .125rem .5rem; }
+
+/* line 28, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
+.button.ux {
+  border-color: #00E0B0;
+  color: #00E0B0; }
+
+/* line 28, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
+.button.design {
+  border-color: #00CCE0;
+  color: #00CCE0; }
+
+/* line 28, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
+.button.front-end {
+  border-color: #1547D3;
+  color: #1547D3; }
+
+/* line 28, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
+.button.back-end {
+  border-color: #8E1DEE;
+  color: #8E1DEE; }
+
+/* line 28, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
+.button.dataviz {
+  border-color: #EE1D8C;
+  color: #EE1D8C; }
 
 /* line 1, /Users/lily/programming/nguyensomniac/source/css/_about.css.scss */
 .about-photo {
@@ -873,7 +946,7 @@ header li, footer li {
 
 /* line 7, /Users/lily/programming/nguyensomniac/source/css/_graphs.css.scss */
 .music-7day-bar {
-  fill: #17DA97; }
+  fill: #16CDA6; }
   /* line 9, /Users/lily/programming/nguyensomniac/source/css/_graphs.css.scss */
   .music-7day-bar:hover {
     fill: #000000; }
@@ -890,7 +963,7 @@ header li, footer li {
 .insta-line {
   fill: none;
   stroke-width: 5;
-  stroke: #17DA97; }
+  stroke: #16CDA6; }
 
 /* line 24, /Users/lily/programming/nguyensomniac/source/css/_graphs.css.scss */
 .insta-point * {
@@ -898,7 +971,7 @@ header li, footer li {
 
 /* line 27, /Users/lily/programming/nguyensomniac/source/css/_graphs.css.scss */
 .insta-point-solid {
-  stroke: #17DA97;
+  stroke: #16CDA6;
   fill: white; }
 
 /* line 31, /Users/lily/programming/nguyensomniac/source/css/_graphs.css.scss */
