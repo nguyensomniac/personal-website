@@ -1,5 +1,8 @@
 ---
 title: 'Miscellaneous Illustrations'
+description: 'Sometimes I draw things.'
+tags:
+  - design
 image: '/img/doelibrary.png'
 ---
 ##Miscellaneous Illustrations

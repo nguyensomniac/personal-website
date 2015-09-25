@@ -1,15 +1,28 @@
 $header-light: #FFFFFF;
 $text-light: #DADADA;
-//$purple: #5F52D3;
-$accent: #17DA97;
-$accent-dark: #17DA97;
+$text-dark: #222;
+$accent: #00E0B0;
+$accent-dark: #16CDA6;
+
+$green: $accent;
+$turquoise: #00CCE0;
+$blue: #1547D3;
+$purple: #8E1DEE;
+$pink: #EE1D8C;
+
 body  {
-  background: #fafafa;
-  color: #222;
+  background: #F8F8F8;
+  color: $text-dark;
   a {
     color: $accent-dark;
   }
 }
+
+.white-panel  {
+  background-color: white;
+  color: $text-dark;
+}
+
 .colorful {
   background-color: $accent;
   color: $header-light;

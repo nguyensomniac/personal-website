@@ -84,7 +84,11 @@ header li, footer li  {
   float: right;
 }
 
-.padded-section {
+.padding-small  {
+  padding: 1.5rem 0;
+}
+
+.padding-large {
   padding: 4rem 0;
 }
 

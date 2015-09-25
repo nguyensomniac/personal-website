@@ -3,25 +3,35 @@ title: Lily Nguyen | Nguyensomniac
 description: Lily Nguyen is a web designer and developer available for hire based in Berkeley, CA.
 ---
 
-<div class="fullsize intro clearfix colorful">
-  <h1 class="vertically-aligned container">I am Lily.<br />
-    Design thinking is what keeps me up at night.</h1>
+<div class="intro clearfix colorful">
+  <h1 class="container padding-xl">I am Lily Nguyen, a Bay Area based designer and developer.</h1>
 </div>
-<div id="work" class="clearfix container padded-section light">
+<div id="work" class="clearfix container padding-large light">
   <h2>Work</h2>
-  <div>
+  <div class="row">
     <% sitemap.resources.select{ |r| r.path.start_with? 'projects/'}.each do |project| %>
-      <% link_to project.path do %>
-        <div class="work-card" style="background-image: url('./<%= project.metadata[:page]["image"] %>')">
-          <div class="work-overlay">
-            <h3 class="work-card-header colorful">
-              <div class="link">
+      <div class="column-dt-6 column-12">
+        <div class="work-card">
+          <% link_to project.path do %>
+            <div class="work-image" style="background-image: url('./<%= project.metadata[:page]["image"] %>')"></div>
+          <% end %>
+          <div class="work-section white-panel">
+            <% link_to project.path do %>
+              <h3 class="work-card-header">
                 <%= project.metadata[:page]["title"] %>
-              </div>
-            </h3>
+              </h3>
+            <% end %>
+            <p>
+              <%= project.metadata[:page]["description"] %>
+            </p>
+            <div class="work-tags button-group">
+              <% project.metadata[:page]["tags"].each do |tag| %>
+                <div class="button button-small <%= tag %>"><%= tag %></div>
+              <% end %>
+            </div>
           </div>
         </div>
-      <% end %>
+      </div>
     <% end %>
   </div>
 </div>

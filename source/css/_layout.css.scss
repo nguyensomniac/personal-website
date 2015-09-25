@@ -71,7 +71,6 @@ header li, footer li  {
 }
 .header-main  {
   width: 100%;
-  padding: 1.5rem 0;
   position: fixed;
   z-index: 1;
 }
@@ -86,9 +85,21 @@ header li, footer li  {
   float: right;
 }
 
-.padded-section {
+.padding-small {
+  padding: 1.5rem 0;
+}
+
+.padding-large {
   padding: 4rem 0;
 }
+
+.padding-xl {
+  padding: 6rem 0;
+  @media screen and (min-width: 43.75rem)  {
+    padding: 8rem 0;
+  }
+}
+
 
 //compensate for fixed header
 .vertical-offset  {
@@ -96,25 +107,29 @@ header li, footer li  {
 }
 //work cards on main page
 .work-card  {
-  padding-top: 33.3%;
-  background-position: center;
-  background-size: 100%;
-  transition: background-size 400ms ease;
-  margin: 3rem 0;
   display: block;
+  margin: 1rem 0;
+  box-shadow: .125rem .1825rem #DFDFDF, .0625rem .125rem #DFDFDF, 0rem .0625rem #DFDFDF;
+  transition: all 200ms ease;
 }
+
 .work-card:hover  {
-  background-size: 105%;
+  transform: translate(.0625rem, .1825rem);
+  box-shadow: 0 0 #DFDFDF, 0 0 #DFDFDF, 0 0 #DFDFDF;
 }
-.work-card-header {
-  bottom: 0;
-  padding: 1rem 2rem;
-  display: inline-block;
+
+.work-card a  {
+  color: inherit;
+  text-decoration: none;
 }
-.work-overlay {
-  position: relative;
-  height: 100%;
+.work-image {
   width: 100%;
+  padding-top: 75%;
+  background-position: center;
+  background-size: cover;
+}
+.work-section {
+  padding: 1rem;
 }
 
 //work page
@@ -138,8 +153,11 @@ header li, footer li  {
   }
 }
 //footer
-.footer-main  {
-  text-align: center;
+.footer-left  {
+  float: left;
+}
+.footer-right {
+  float: right;
 }
 .footer-icons {
   margin: .75rem 0;

@@ -1,0 +1,32 @@
+.button {
+  border: .1875rem solid currentColor;
+  border-radius: .4375rem;
+  margin: 0 .25rem;
+  display: inline-block;
+}
+
+.button-group {
+  margin-left: -.25rem;
+  margin-right: -.25rem;
+}
+
+.button-small {
+  border-width: .0675rem;
+  padding: .125rem .5rem;
+}
+
+//Tag colors
+$tags: (
+  ux: $green,
+  design: $turquoise,
+  front-end: $blue,
+  back-end: $purple,
+  dataviz: $pink
+);
+
+@each $tag, $color in $tags {
+  .button.#{$tag}  {
+    border-color: $color;
+    color: $color;
+  }
+}
