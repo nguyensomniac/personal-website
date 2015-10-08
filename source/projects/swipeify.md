@@ -9,7 +9,7 @@ image: '/img/swipeify.png'
 
 ## Swipeify
 
-![Alt text](/img/swipeify-demo.gif)
+![Swipeify](/img/swipeify-demo.gif)
 
 My final assignment in a web design course was to make something cool. I love the user experience of Tinder, so I sought to replicate its simplicity in the realm of music discovery.
 
