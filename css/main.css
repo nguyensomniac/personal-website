@@ -851,7 +851,7 @@ header li, footer li {
 
 /* line 137, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .work-section p {
-  margin-bottom: 1.5em; }
+  padding-bottom: 2em; }
 
 /* line 141, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .work-tags {
