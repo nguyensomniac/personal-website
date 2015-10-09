@@ -1,5 +1,4 @@
 //= require "jquery"
-//= require "d3"
 var workScroll = function() {
   $('html, body').animate({
       scrollTop: $('#work').offset().top

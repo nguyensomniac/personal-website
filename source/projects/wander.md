@@ -24,6 +24,6 @@ I went through multiple iterations of the results display. I eventually went wit
 
 ![Wander](/img/wander-2.png)
 
-Tapping on each city takes users to a page where they can book their trip. However, unlike other travel websites, we automatically match you with the cheapest option we can find, and you can book a plane ticket, a hotel, and a car rental with one tap.
+Tapping on each city takes users to a page where they can book their trip. Our main focus was not to replace the functionality of existing travel booking websites - implementing advanced search features would detract from the purpose of our app. Instead, we automatically match you with the cheapest option we can find so you can book a plane ticket, a hotel, and a car rental with one tap.
 
 ![Wander](/img/wander-3.png)
