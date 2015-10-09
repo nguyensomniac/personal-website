@@ -846,14 +846,24 @@ header li, footer li {
 /* line 131, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .work-section {
   padding: 1rem;
-  min-height: 11.25rem; }
+  min-height: 11.25rem;
+  position: relative; }
 
 /* line 137, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+.work-section p {
+  margin-bottom: 1.5em; }
+
+/* line 141, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+.work-tags {
+  position: absolute;
+  bottom: 1rem; }
+
+/* line 147, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .work-page img {
   display: block;
   margin: auto; }
 
-/* line 143, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 153, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .about-photo {
   width: 100%;
   padding-top: 100%;
@@ -863,19 +873,19 @@ header li, footer li {
   margin-top: 1rem; }
 
 @media screen and (max-width: 480px) {
-  /* line 151, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+  /* line 161, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
   .about-stats {
     display: none; } }
 
-/* line 157, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 167, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .footer-left {
   float: left; }
 
-/* line 160, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 170, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .footer-right {
   float: right; }
 
-/* line 163, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 173, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .footer-icons {
   margin: .75rem 0; }
 
