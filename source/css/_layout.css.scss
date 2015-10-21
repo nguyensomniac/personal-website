@@ -130,6 +130,17 @@ header li, footer li  {
 }
 .work-section {
   padding: 1rem;
+  min-height: 11.25rem;
+  position: relative;
+}
+
+.work-section p {
+  padding-bottom: 2em;
+}
+
+.work-tags  {
+  position: absolute;
+  bottom: 1rem;
 }
 
 //work page
