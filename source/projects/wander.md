@@ -4,6 +4,7 @@ description: 'Find your dream destination. Book an instant vacation.'
 tags:
   - design
 image: '/img/wander.png'
+id: 2
 ---
 
 ## Wander

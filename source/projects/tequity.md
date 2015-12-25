@@ -5,6 +5,7 @@ tags:
   - design
   - front-end
 image: '/img/tequity.png'
+id: 1
 ---
 
 ## Tequity Website 

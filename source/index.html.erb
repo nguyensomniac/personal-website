@@ -9,7 +9,7 @@ description: Home of Lily Nguyen, a product designer, web developer, and maker o
 <div id="work" class="clearfix container padding-large light">
   <h2>Work</h2>
   <div class="row">
-    <% sitemap.resources.select{ |r| r.path.start_with? 'projects/'}.each do |project| %>
+    <% sitemap.where(:id.gte => 0).order_by(:id).all.each do |project| %>
       <div class="column-dt-6 column-12">
         <div class="work-card">
           <% link_to project.path do %>
@@ -18,14 +18,14 @@ description: Home of Lily Nguyen, a product designer, web developer, and maker o
           <div class="work-section white-panel">
             <% link_to project.path do %>
               <h3 class="work-card-header">
-                <%= project.metadata[:page]["title"] %>
+                <%= project.data["title"] %>
               </h3>
             <% end %>
             <p>
-              <%= project.metadata[:page]["description"] %>
+              <%= project.data["description"] %>
             </p>
             <div class="work-tags button-group">
-              <% project.metadata[:page]["tags"].each do |tag| %>
+              <% project.data["tags"].each do |tag| %>
                 <div class="button button-small <%= tag %>"><%= tag %></div>
               <% end %>
             </div>
