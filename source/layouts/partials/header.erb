@@ -1,11 +1,12 @@
-<header class="header-main padding-small colorful">
+<header class="header padding-small header__absolute">
   <nav>
     <div class="container row">
-      <div class="nav-left"><h4><%= link_to 'Lily Nguyen', '/index.html' %></h4></div>
-      <div class="nav-right">
-        <ul>
-          <li><h4><%= link_to 'Work', '/index.html#work' %></h4></li>
-          <li><h4><%= link_to 'About + Contact', '/about.html' %></h4></li>
+      <div class="header--left"><h4><%= link_to 'Lily Nguyen', '/index.html', :class => "header--link" %></h4></div>
+      <div class="header--right">
+        <ul class="header--navigation">
+          <li><h4><%= link_to 'Projects', '/index.html#projects', :class => "header--link" %></h4></li>
+          <li><h4><%= link_to 'About', '/index.html#about', :class => "header--link" %></h4></li>
+          <li><h4><%= link_to 'Contact', '/index.html#contact', :class => "header--link" %></h4></li>
         </ul>
       </div>
     </div>

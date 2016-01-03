@@ -3,35 +3,74 @@ title: Lily Nguyen | Nguyensomniac
 description: Home of Lily Nguyen, a product designer, web developer, and maker of things studying at UC Berkeley.
 ---
 
-<div class="intro clearfix colorful">
-  <h1 class="container padding-xl">I am Lily Nguyen, a Bay Area based designer and developer.</h1>
+<div class="intro clearfix section__colorful hero">
+  <div class="horizontally-aligned container vertically-aligned">
+    <h1>I am Lily Nguyen, <span class="typed">a Bay Area based designer and developer.</span></h1>
+    <button class="button switcher">And what else?</button>
+  </div>
 </div>
-<div id="work" class="clearfix container padding-large light">
-  <h2>Work</h2>
-  <div class="row">
-    <% sitemap.where(:id.gte => 0).order_by(:id).all.each do |project| %>
-      <div class="column-dt-6 column-12">
-        <div class="work-card">
-          <% link_to project.path do %>
-            <div class="work-image" style="background-image: url('./<%= project.metadata[:page]["image"] %>')"></div>
-          <% end %>
-          <div class="work-section white-panel">
+<%= partial "/layouts/partials/header" %>
+<div id="projects" class="clearfix section__grey padding-large vertical-offset">
+  <div class="container">  
+    <h2>Projects</h2>
+    <div class="row">
+      <% sitemap.where(:id.gte => 0).order_by(:id).all.each do |project| %>
+        <div class="column-dt-6 column-12">
+          <div class="work-card">
             <% link_to project.path do %>
-              <h3 class="work-card-header">
-                <%= project.data["title"] %>
-              </h3>
+              <div class="work-image" style="background-image: url('./<%= project.metadata[:page]["image"] %>')"></div>
             <% end %>
-            <p>
-              <%= project.data["description"] %>
-            </p>
-            <div class="work-tags button-group">
-              <% project.data["tags"].each do |tag| %>
-                <div class="button button-small <%= tag %>"><%= tag %></div>
+            <div class="work-section white-panel">
+              <% link_to project.path do %>
+                <h3 class="work-card-header">
+                  <%= project.data["title"] %>
+                </h3>
               <% end %>
+              <p>
+                <%= project.data["description"] %>
+              </p>
+              <div class="work-tags button-group">
+                <% project.data["tags"].each do |tag| %>
+                  <div class="button button-small <%= tag %>"><%= tag %></div>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div id="about" class="container padding-large section__white">
+  <div class="row">
+    <div class="column-12"> 
+      <h2>About</h2>
+    </div>
+    <div class="column-12 column-dt-3">
+      <div class="about-photo"></div>
+    </div>
+    <div class="about-body column-dt-9 column-12">
+      <p>I am an interdisciplinary creative based in Berkeley, CA. I currently study computer science at UC Berkeley and am addicted to pushing pixels, crunching code, and delving into data.</p>
+
+      <p>I currently lead design for Tequity and create interactives for The Daily Californian. Before that, I created products at <a href="http://scalablepress.com/">Scalable Press</a>, planned events at <a href="http://hackersatberkeley.com/">Hackers@Berkeley</a>, and wrote about startups for <a href="http://www.berkeleybyte.com/author/lilynguyen/">berkeleyByte</a>.</p>
+
+      <p>When I'm not hacking, you might catch me exploring the Bay or watching a concert. Regrettably, I spend a disproportionate amount of my income on bubble tea.</p>
+
+    </div>
+  </div>
+</div>
+<div id="contact" class="fullsize section__colorful clearfix">
+  <div class="container horizontally-aligned vertically-aligned">
+    <h1>Let's meet up.</h1>
+    <div class="text__large">
+      <p>Looking for a summer intern or just want to say hi? Send me an email at <a href="mailto:lily@nguyensomniac.com">lily@nguyensomniac.com</a>.</p>
+      <p>If email isn’t your thing, you can find me elsewhere on the web:</p>
+      <div class="icons">
+        <a class="i-github" href="http://github.com/nguyensomniac"></a>
+        <a class="i-linkedin" href="https://linkedin.com/in/nguyensomniac"></a>
+        <a class="i-instagram" href="http://instagram.com/nguyensomniac"></a>
       </div>
-    <% end %>
+    </div>
+    </div>
   </div>
 </div>

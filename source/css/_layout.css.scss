@@ -37,8 +37,11 @@ $padding: 1.75rem;
 
 .container {
   max-width: $max-width;
-  width: 95%;
+  width: 90%;
   margin: auto;
+  @media screen and (min-width: 43.75rem)  {
+    width: 95%;
+  }
 }
 .container img  {
   max-width: 100%;
@@ -60,30 +63,6 @@ body, html  {
 .horizontally-aligned {
   text-align: center;
 }
-//inline lists for header and footer
-header ul, footer ul  {
-  margin: 0;
-  padding: 0;
-}
-header li, footer li  {
-  list-style-type: none;
-  display: inline;
-}
-.header-main  {
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-}
-.header-main li h4 {
-  padding-left: .75rem;
-  display: inline;
-}
-.nav-left  {
-  float: left;
-}
-.nav-right {
-  float: right;
-}
 
 .padding-small {
   padding: 1.5rem 0;
@@ -93,11 +72,9 @@ header li, footer li  {
   padding: 4rem 0;
 }
 
-.padding-xl {
-  padding: 6rem 0;
-  @media screen and (min-width: 43.75rem)  {
-    padding: 8rem 0;
-  }
+.hero {
+  height: percentage(2/3);
+  padding: .5rem 0; //fixes margin collapse
 }
 
 
@@ -111,6 +88,7 @@ header li, footer li  {
   margin: 1rem 0;
   box-shadow: .125rem .1825rem #DFDFDF, .0625rem .125rem #DFDFDF, 0rem .0625rem #DFDFDF;
   transition: all 200ms ease;
+  background-color: white;
 }
 
 .work-card:hover  {
@@ -132,6 +110,7 @@ header li, footer li  {
   padding: 1rem;
   min-height: 11.25rem;
   position: relative;
+  box-sizing: content-box;
 }
 
 .work-section p {
@@ -149,20 +128,7 @@ header li, footer li  {
   margin: auto;
 }
 
-//about page
-.about-photo  {
-  width: 100%;
-  padding-top: 100%;
-  background-image: url('./assets/img/self.jpg');
-  background-size: cover;
-  border-radius: 50%;
-  margin-top: 1rem;
-}
-.about-stats  {
-  @media screen and (max-width: 480px)  {
-    display: none;
-  }
-}
+
 //footer
 .footer-left  {
   float: left;

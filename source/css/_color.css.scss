@@ -1,7 +1,8 @@
 $header-light: #FFFFFF;
 $text-light: #DADADA;
 $text-dark: #222;
-$accent: #00E0B0;
+$accent: #00E0AC;
+$accent-bright: #A3FFD6;
 $accent-dark: #16CDA6;
 
 $green: $accent;
@@ -9,24 +10,32 @@ $turquoise: #00CCE0;
 $blue: #1547D3;
 $purple: #8E1DEE;
 $pink: #EE1D8C;
+$grey: #F8F8F8;
 
 body  {
-  background: #F8F8F8;
   color: $text-dark;
-  a {
-    color: $accent-dark;
-  }
 }
 
-.white-panel  {
+a:hover,
+.link:hover {
+  background-color: $accent-bright;
+}
+
+.section__white  {
   background-color: white;
   color: $text-dark;
 }
 
-.colorful {
+.section__grey  {
+  background-color: $grey;
+}
+
+.section__colorful  {
   background-color: $accent;
   color: $header-light;
-  a {
-    color: $header-light;
-  }
+}
+
+.section__colorful a:not([class^='i-']):hover,
+.section__colorful .link:not([class^='i-']):hover  {
+  background-color: transparent;
 }

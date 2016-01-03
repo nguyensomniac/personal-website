@@ -1,14 +1,13 @@
 .about-photo  {
-  width: 25%;
-  padding-top: 25%;
+  width: percentage(2/3);
+  padding-top: percentage(3/4);
   background-image: url('../img/self.jpg');
   background-size: cover;
-  border-radius: 50%;
-  margin: auto;
-  margin-bottom: 1rem;
+  background-position: 50%;
+  margin: 1rem auto;
   @media screen and (min-width: 43.75rem)  {
     width: 100%;
-    padding-top: 100%;
+    padding-top: 125%;
     margin-top: 1rem;
   }
 }

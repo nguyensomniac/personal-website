@@ -2,7 +2,7 @@
 title: 'Branch Metrics Dashboard'
 description: 'Data visualization of mobile deeplinks.'
 tags:
-  - dataviz
+  - visualization
 image: '/img/work-3.png'
 id: 4
 ---

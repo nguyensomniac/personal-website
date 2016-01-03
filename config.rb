@@ -95,5 +95,7 @@ end
 #sprockets
 #enable bower
 sprockets.append_path File.join root, 'bower_components'
-sprockets.import_asset 'jquery/dist/jquery.js'
-sprockets.import_asset 'd3/d3.js'
+assets = ['jquery', 'jquery.typer'] #supports package names, as well as specific paths
+assets.each do |asset|
+  sprockets.import_asset asset
+end

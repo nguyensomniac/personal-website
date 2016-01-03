@@ -1,11 +1,12 @@
 @import 'normalize';
 
 //Centralize imports
+@import 'defaults';
 @import 'util';
 @import 'fonts';
 @import 'typography';
 @import 'color';
 @import 'layout';
 @import 'buttons';
+@import 'navbar';
 @import 'about';
-@import 'graphs';
