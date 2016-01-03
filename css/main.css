@@ -402,225 +402,238 @@ td,
 th {
   padding: 0; }
 
+/* line 1, /Users/lily/programming/nguyensomniac/source/css/_defaults.css.scss */
+* {
+  box-sizing: border-box; }
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?addf79");
   src: url("../fonts/icomoon/icomoon.eot?#iefixaddf79") format("embedded-opentype"), url("../fonts/icomoon/icomoon.woff?addf79") format("woff"), url("../fonts/icomoon/icomoon.ttf?addf79") format("truetype"), url("../fonts/icomoon/icomoon.svg?addf79#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
-/* line 17, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 19, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 body {
   font-family: "Source Sans Pro", "Helvetica Neue", sans-serif;
   line-height: 1.7;
   font-size: 1.125rem;
   font-weight: 300; }
 
-/* line 23, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 25, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
   margin: 0;
   font-weight: 500; }
 
-/* line 28, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 30, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 h1 {
   font-size: 2.625rem;
-  font-weight: 300; }
+  font-weight: 300;
+  padding: .25em 0; }
   @media screen and (min-width: 43.75rem) {
-    /* line 28, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+    /* line 30, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
     h1 {
       font-size: 4.5rem; } }
 
-/* line 35, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 38, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 h2 {
   font-size: 2.625rem;
   font-weight: 300; }
 
-/* line 39, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 42, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 h3 {
   font-size: 1.875rem;
   font-weight: 700; }
 
-/* line 43, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 46, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 h4 {
   font-size: 1.125rem;
   font-weight: 500; }
 
-/* line 47, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 50, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 h5 {
   font-size: 1.125rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700; }
 
-/* line 53, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 56, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 a,
 .link {
-  text-decoration: underline; }
-  /* line 56, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  color: currentColor;
+  font-weight: 700; }
+  /* line 60, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   a:hover,
   .link:hover {
     text-decoration: none; }
 
-/* line 60, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
-.light a,
-p a {
-  font-weight: 700; }
+/* line 65, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+.text__centered {
+  text-align: center; }
 
-/* line 64, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
-.colorful a {
-  font-weight: inherit; }
+@media screen and (min-width: 43.75rem) {
+  /* line 69, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  .text__large {
+    font-size: 1.5rem; } }
 
-/* line 69, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 76, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 .button {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .125em; }
 
-/* line 75, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 82, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 .button-small {
   font-size: 1rem;
   letter-spacing: .0675em; }
 
-/* line 100, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 107, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 .i-email {
   display: inline-block;
   vertical-align: middle;
   margin-right: .75rem;
   padding: .75rem;
   border: .125rem currentColor solid;
-  border-radius: 50%;
+  border-radius: .4375rem;
   line-height: 1;
   text-decoration: none;
   transition: all 300ms ease; }
-  /* line 91, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 98, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-email::after {
     font-family: "Icomoon";
     font-size: 1.5rem;
     content: ""; }
-  /* line 96, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 103, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-email:hover {
-    transform: scale(1.2); }
+    background-color: rgba(255, 255, 255, 0.2); }
 
-/* line 103, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 110, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 .i-linkedin {
   display: inline-block;
   vertical-align: middle;
   margin-right: .75rem;
   padding: .75rem;
   border: .125rem currentColor solid;
-  border-radius: 50%;
+  border-radius: .4375rem;
   line-height: 1;
   text-decoration: none;
   transition: all 300ms ease; }
-  /* line 91, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 98, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-linkedin::after {
     font-family: "Icomoon";
     font-size: 1.5rem;
     content: ""; }
-  /* line 96, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 103, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-linkedin:hover {
-    transform: scale(1.2); }
+    background-color: rgba(255, 255, 255, 0.2); }
 
-/* line 106, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 113, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 .i-github {
   display: inline-block;
   vertical-align: middle;
   margin-right: .75rem;
   padding: .75rem;
   border: .125rem currentColor solid;
-  border-radius: 50%;
+  border-radius: .4375rem;
   line-height: 1;
   text-decoration: none;
   transition: all 300ms ease; }
-  /* line 91, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 98, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-github::after {
     font-family: "Icomoon";
     font-size: 1.5rem;
     content: ""; }
-  /* line 96, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 103, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-github:hover {
-    transform: scale(1.2); }
+    background-color: rgba(255, 255, 255, 0.2); }
 
-/* line 109, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 116, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 .i-dribbble {
   display: inline-block;
   vertical-align: middle;
   margin-right: .75rem;
   padding: .75rem;
   border: .125rem currentColor solid;
-  border-radius: 50%;
+  border-radius: .4375rem;
   line-height: 1;
   text-decoration: none;
   transition: all 300ms ease; }
-  /* line 91, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 98, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-dribbble::after {
     font-family: "Icomoon";
     font-size: 1.5rem;
     content: ""; }
-  /* line 96, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 103, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-dribbble:hover {
-    transform: scale(1.2); }
+    background-color: rgba(255, 255, 255, 0.2); }
 
-/* line 112, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 119, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 .i-instagram {
   display: inline-block;
   vertical-align: middle;
   margin-right: .75rem;
   padding: .75rem;
   border: .125rem currentColor solid;
-  border-radius: 50%;
+  border-radius: .4375rem;
   line-height: 1;
   text-decoration: none;
   transition: all 300ms ease; }
-  /* line 91, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 98, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-instagram::after {
     font-family: "Icomoon";
     font-size: 1.5rem;
     content: ""; }
-  /* line 96, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 103, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-instagram:hover {
-    transform: scale(1.2); }
+    background-color: rgba(255, 255, 255, 0.2); }
 
-/* line 115, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+/* line 122, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
 .i-lastfm {
   display: inline-block;
   vertical-align: middle;
   margin-right: .75rem;
   padding: .75rem;
   border: .125rem currentColor solid;
-  border-radius: 50%;
+  border-radius: .4375rem;
   line-height: 1;
   text-decoration: none;
   transition: all 300ms ease; }
-  /* line 91, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 98, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-lastfm::after {
     font-family: "Icomoon";
     font-size: 1.5rem;
     content: ""; }
-  /* line 96, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
+  /* line 103, /Users/lily/programming/nguyensomniac/source/css/_typography.css.scss */
   .i-lastfm:hover {
-    transform: scale(1.2); }
+    background-color: rgba(255, 255, 255, 0.2); }
 
-/* line 13, /Users/lily/programming/nguyensomniac/source/css/_color.css.scss */
+/* line 15, /Users/lily/programming/nguyensomniac/source/css/_color.css.scss */
 body {
-  background: #F8F8F8;
   color: #222; }
-  /* line 16, /Users/lily/programming/nguyensomniac/source/css/_color.css.scss */
-  body a {
-    color: #16CDA6; }
 
-/* line 21, /Users/lily/programming/nguyensomniac/source/css/_color.css.scss */
-.white-panel {
+/* line 19, /Users/lily/programming/nguyensomniac/source/css/_color.css.scss */
+a:hover,
+.link:hover {
+  background-color: #A3FFD6; }
+
+/* line 24, /Users/lily/programming/nguyensomniac/source/css/_color.css.scss */
+.section__white {
   background-color: white;
   color: #222; }
 
-/* line 26, /Users/lily/programming/nguyensomniac/source/css/_color.css.scss */
-.colorful {
-  background-color: #00E0B0;
+/* line 29, /Users/lily/programming/nguyensomniac/source/css/_color.css.scss */
+.section__grey {
+  background-color: #F8F8F8; }
+
+/* line 33, /Users/lily/programming/nguyensomniac/source/css/_color.css.scss */
+.section__colorful {
+  background-color: #00E0AC;
   color: #FFFFFF; }
-  /* line 29, /Users/lily/programming/nguyensomniac/source/css/_color.css.scss */
-  .colorful a {
-    color: #FFFFFF; }
+
+/* line 38, /Users/lily/programming/nguyensomniac/source/css/_color.css.scss */
+.section__colorful a:not([class^='i-']):hover,
+.section__colorful .link:not([class^='i-']):hover {
+  background-color: transparent; }
 
 /* line 7, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .row {
@@ -744,148 +757,108 @@ body {
 /* line 38, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .container {
   max-width: 60rem;
-  width: 95%;
+  width: 90%;
   margin: auto; }
+  @media screen and (min-width: 43.75rem) {
+    /* line 38, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+    .container {
+      width: 95%; } }
 
-/* line 43, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 46, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .container img {
   max-width: 100%;
   width: auto; }
 
-/* line 48, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 51, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 body, html {
   height: 100%; }
 
-/* line 51, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 54, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .fullsize {
   height: 100%; }
 
-/* line 55, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 58, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .vertically-aligned {
   position: relative;
   top: 50%;
   transform: translateY(-50%); }
 
-/* line 60, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 63, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .horizontally-aligned {
   text-align: center; }
 
-/* line 64, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
-header ul, footer ul {
-  margin: 0;
-  padding: 0; }
-
-/* line 68, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
-header li, footer li {
-  list-style-type: none;
-  display: inline; }
-
-/* line 72, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
-.header-main {
-  width: 100%;
-  position: fixed;
-  z-index: 1; }
-
-/* line 77, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
-.header-main li h4 {
-  padding-left: .75rem;
-  display: inline; }
-
-/* line 81, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
-.nav-left {
-  float: left; }
-
-/* line 84, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
-.nav-right {
-  float: right; }
-
-/* line 88, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 67, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .padding-small {
   padding: 1.5rem 0; }
 
-/* line 92, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 71, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .padding-large {
   padding: 4rem 0; }
 
-/* line 96, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
-.padding-xl {
-  padding: 6rem 0; }
-  @media screen and (min-width: 43.75rem) {
-    /* line 96, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
-    .padding-xl {
-      padding: 8rem 0; } }
+/* line 75, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+.hero {
+  height: 66.66667%;
+  padding: .5rem 0; }
 
-/* line 105, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 82, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .vertical-offset {
   padding-top: 7.5rem; }
 
-/* line 109, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 86, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .work-card {
   display: block;
   margin: 1rem 0;
   box-shadow: .125rem .1825rem #DFDFDF, .0625rem .125rem #DFDFDF, 0rem .0625rem #DFDFDF;
-  transition: all 200ms ease; }
+  transition: all 200ms ease;
+  background-color: white; }
 
-/* line 116, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 94, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .work-card:hover {
   transform: translate(0.0625rem, 0.1825rem);
   box-shadow: 0 0 #DFDFDF, 0 0 #DFDFDF, 0 0 #DFDFDF; }
 
-/* line 121, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 99, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .work-card a {
   color: inherit;
   text-decoration: none; }
 
-/* line 125, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 103, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .work-image {
   width: 100%;
   padding-top: 75%;
   background-position: center;
   background-size: cover; }
 
-/* line 131, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 109, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .work-section {
   padding: 1rem;
   min-height: 11.25rem;
-  position: relative; }
+  position: relative;
+  box-sizing: content-box; }
 
-/* line 137, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 116, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .work-section p {
   padding-bottom: 2em; }
 
-/* line 141, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 120, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .work-tags {
   position: absolute;
   bottom: 1rem; }
 
-/* line 147, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 126, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .work-page img {
   display: block;
   margin: auto; }
 
-/* line 153, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
-.about-photo {
-  width: 100%;
-  padding-top: 100%;
-  background-image: url("./assets/img/self.jpg");
-  background-size: cover;
-  border-radius: 50%;
-  margin-top: 1rem; }
-
-@media screen and (max-width: 480px) {
-  /* line 161, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
-  .about-stats {
-    display: none; } }
-
-/* line 167, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 133, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .footer-left {
   float: left; }
 
-/* line 170, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 136, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .footer-right {
   float: right; }
 
-/* line 173, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
+/* line 139, /Users/lily/programming/nguyensomniac/source/css/_layout.css.scss */
 .footer-icons {
   margin: .75rem 0; }
 
@@ -894,99 +867,128 @@ header li, footer li {
   border: .1875rem solid currentColor;
   border-radius: .4375rem;
   margin: 0 .25rem;
-  display: inline-block; }
+  display: inline-block;
+  padding: .5rem 1rem;
+  background-color: transparent;
+  font-size: 1rem; }
+  @media screen and (min-width: 43.75rem) {
+    /* line 1, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
+    .button {
+      font-size: inherit; } }
 
-/* line 8, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
+/* line 14, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
+.section__colorful .button:hover,
+.section__colorful .button:active {
+  background-color: rgba(255, 255, 255, 0.2); }
+
+/* line 18, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
+.section__colorful .button:focus {
+  outline: 0; }
+
+/* line 22, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
 .button-group {
   margin-left: -.25rem;
   margin-right: -.25rem; }
 
-/* line 13, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
+/* line 27, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
 .button-small {
   border-width: .0675rem;
   padding: .125rem .5rem; }
 
-/* line 28, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
+/* line 42, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
 .button.ux {
-  border-color: #00E0B0;
-  color: #00E0B0; }
+  border-color: #00E0AC;
+  color: #00E0AC; }
 
-/* line 28, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
+/* line 42, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
 .button.design {
   border-color: #00CCE0;
   color: #00CCE0; }
 
-/* line 28, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
+/* line 42, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
 .button.front-end {
   border-color: #1547D3;
   color: #1547D3; }
 
-/* line 28, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
+/* line 42, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
 .button.back-end {
   border-color: #8E1DEE;
   color: #8E1DEE; }
 
-/* line 28, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
-.button.dataviz {
+/* line 42, /Users/lily/programming/nguyensomniac/source/css/_buttons.scss */
+.button.visualization {
   border-color: #EE1D8C;
   color: #EE1D8C; }
 
+/* line 2, /Users/lily/programming/nguyensomniac/source/css/_navbar.scss */
+header ul, footer ul {
+  margin: 0;
+  padding: 0; }
+
+/* line 6, /Users/lily/programming/nguyensomniac/source/css/_navbar.scss */
+header li, footer li {
+  list-style-type: none;
+  display: inline; }
+
+/* line 10, /Users/lily/programming/nguyensomniac/source/css/_navbar.scss */
+.header {
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  border-bottom: 0.1875rem solid #A3FFD6; }
+
+/* line 16, /Users/lily/programming/nguyensomniac/source/css/_navbar.scss */
+.header__absolute {
+  position: absolute; }
+
+/* line 19, /Users/lily/programming/nguyensomniac/source/css/_navbar.scss */
+.header__fixed {
+  position: fixed;
+  top: 0; }
+
+/* line 23, /Users/lily/programming/nguyensomniac/source/css/_navbar.scss */
+.header a {
+  font-weight: 400; }
+
+/* line 26, /Users/lily/programming/nguyensomniac/source/css/_navbar.scss */
+.header li h4 {
+  padding-left: .75rem;
+  display: inline; }
+
+/* line 30, /Users/lily/programming/nguyensomniac/source/css/_navbar.scss */
+.header--link {
+  color: inherit;
+  text-decoration: none; }
+
+/* line 34, /Users/lily/programming/nguyensomniac/source/css/_navbar.scss */
+.header--navigation .header--link {
+  opacity: .5;
+  transition: opacity 200ms ease; }
+
+/* line 38, /Users/lily/programming/nguyensomniac/source/css/_navbar.scss */
+.header--navigation .header--link.active {
+  font-weight: 700;
+  opacity: 1; }
+
+/* line 42, /Users/lily/programming/nguyensomniac/source/css/_navbar.scss */
+.header--left {
+  float: left; }
+
+/* line 45, /Users/lily/programming/nguyensomniac/source/css/_navbar.scss */
+.header--right {
+  float: right; }
+
 /* line 1, /Users/lily/programming/nguyensomniac/source/css/_about.css.scss */
 .about-photo {
-  width: 25%;
-  padding-top: 25%;
+  width: 66.66667%;
+  padding-top: 75%;
   background-image: url("../img/self.jpg");
   background-size: cover;
-  border-radius: 50%;
-  margin: auto;
-  margin-bottom: 1rem; }
+  background-position: 50%;
+  margin: 1rem auto; }
   @media screen and (min-width: 43.75rem) {
     /* line 1, /Users/lily/programming/nguyensomniac/source/css/_about.css.scss */
     .about-photo {
       width: 100%;
-      padding-top: 100%;
+      padding-top: 125%;
       margin-top: 1rem; } }
-
-/* line 1, /Users/lily/programming/nguyensomniac/source/css/_graphs.css.scss */
-.about-graphs svg {
-  margin: .75rem 0; }
-
-/* line 4, /Users/lily/programming/nguyensomniac/source/css/_graphs.css.scss */
-.music-7day-graph text * {
-  dominant-baseline: text-before-edge; }
-
-/* line 7, /Users/lily/programming/nguyensomniac/source/css/_graphs.css.scss */
-.music-7day-bar {
-  fill: #16CDA6; }
-  /* line 9, /Users/lily/programming/nguyensomniac/source/css/_graphs.css.scss */
-  .music-7day-bar:hover {
-    fill: #000000; }
-
-/* line 13, /Users/lily/programming/nguyensomniac/source/css/_graphs.css.scss */
-.music-7day-artist {
-  font-weight: 700; }
-
-/* line 16, /Users/lily/programming/nguyensomniac/source/css/_graphs.css.scss */
-.insta-graph svg {
-  overflow: visible; }
-
-/* line 19, /Users/lily/programming/nguyensomniac/source/css/_graphs.css.scss */
-.insta-line {
-  fill: none;
-  stroke-width: 5;
-  stroke: #16CDA6; }
-
-/* line 24, /Users/lily/programming/nguyensomniac/source/css/_graphs.css.scss */
-.insta-point * {
-  cursor: pointer; }
-
-/* line 27, /Users/lily/programming/nguyensomniac/source/css/_graphs.css.scss */
-.insta-point-solid {
-  stroke: #16CDA6;
-  fill: white; }
-
-/* line 31, /Users/lily/programming/nguyensomniac/source/css/_graphs.css.scss */
-.insta-point text {
-  font-size: 12px;
-  dominant-baseline: central;
-  font-weight: 600; }

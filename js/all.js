@@ -9209,12 +9209,367 @@ if ( typeof noGlobal === strundefined ) {
 return jQuery;
 
 }));
-var workScroll = function() {
-  $('html, body').animate({
-      scrollTop: $('#work').offset().top
-  }, 500);
-}
-if(window.location.hash === '#work') {
-  workScroll();
-}
-;
+String.prototype.rightChars = function(n){
+  if (n <= 0) {
+    return "";
+  }
+  else if (n > this.length) {
+    return this;
+  }
+  else {
+    return this.substring(this.length, this.length - n);
+  }
+};
+
+(function($) {
+  var
+    options = {
+      highlightSpeed    : 20,
+      typeSpeed         : 100,
+      clearDelay        : 500,
+      typeDelay         : 200,
+      clearOnHighlight  : true,
+      typerDataAttr     : 'data-typer-targets',
+      typerInterval     : 2000
+    },
+    highlight,
+    clearText,
+    backspace,
+    type,
+    spanWithColor,
+    clearDelay,
+    typeDelay,
+    clearData,
+    isNumber,
+    typeWithAttribute,
+    getHighlightInterval,
+    getTypeInterval,
+    typerInterval;
+
+  spanWithColor = function(color, backgroundColor) {
+    if (color === 'rgba(0, 0, 0, 0)') {
+      color = 'rgb(255, 255, 255)';
+    }
+
+    return $('<span></span>')
+      .css('color', color)
+      .css('background-color', backgroundColor);
+  };
+
+  isNumber = function (n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+  };
+
+  clearData = function ($e) {
+    $e.removeData([
+      'typePosition',
+      'highlightPosition',
+      'leftStop',
+      'rightStop',
+      'primaryColor',
+      'backgroundColor',
+      'text',
+      'typing'
+    ]);
+  };
+
+  type = function ($e) {
+    var
+      // position = $e.data('typePosition'),
+      text = $e.data('text'),
+      oldLeft = $e.data('oldLeft'),
+      oldRight = $e.data('oldRight');
+
+    // if (!isNumber(position)) {
+      // position = $e.data('leftStop');
+    // }
+
+    if (!text || text.length === 0) {
+      clearData($e);
+      return;
+    }
+
+
+    $e.text(
+      oldLeft +
+      text.charAt(0) +
+      oldRight
+    ).data({
+      oldLeft: oldLeft + text.charAt(0),
+      text: text.substring(1)
+    });
+
+    // $e.text($e.text() + text.substring(position, position + 1));
+
+    // $e.data('typePosition', position + 1);
+
+    setTimeout(function () {
+      type($e);
+    }, getTypeInterval());
+  };
+
+  clearText = function ($e) {
+    $e.find('span').remove();
+
+    setTimeout(function () {
+      type($e);
+    }, typeDelay());
+  };
+
+  highlight = function ($e) {
+    var
+      position = $e.data('highlightPosition'),
+      leftText,
+      highlightedText,
+      rightText;
+
+    if (!isNumber(position)) {
+      position = $e.data('rightStop') + 1;
+    }
+
+    if (position <= $e.data('leftStop')) {
+      setTimeout(function () {
+        clearText($e);
+      }, clearDelay());
+      return;
+    }
+
+    leftText = $e.text().substring(0, position - 1);
+    highlightedText = $e.text().substring(position - 1, $e.data('rightStop') + 1);
+    rightText = $e.text().substring($e.data('rightStop') + 1);
+
+    $e.html(leftText)
+      .append(
+        spanWithColor(
+            $e.data('backgroundColor'),
+            $e.data('primaryColor')
+          )
+          .append(highlightedText)
+      )
+      .append(rightText);
+
+    $e.data('highlightPosition', position - 1);
+
+    setTimeout(function () {
+      return highlight($e);
+    }, getHighlightInterval());
+  };
+
+  typeWithAttribute = function ($e) {
+    var targets;
+
+    if ($e.data('typing')) {
+      return;
+    }
+
+    try {
+      targets = JSON.parse($e.attr($.typer.options.typerDataAttr)).targets;
+    } catch (e) {}
+
+    if (typeof targets === "undefined") {
+      targets = $.map($e.attr($.typer.options.typerDataAttr).split(','), function (e) {
+        return $.trim(e);
+      });
+    }
+
+    $e.typeTo(targets[Math.floor(Math.random()*targets.length)]);
+  };
+
+  // Expose our options to the world.
+  $.typer = (function () {
+    return { options: options };
+  })();
+
+  $.extend($.typer, {
+    options: options
+  });
+
+  //-- Methods to attach to jQuery sets
+
+  $.fn.typer = function() {
+    var $elements = $(this);
+
+    return $elements.each(function () {
+      var $e = $(this);
+
+      if (typeof $e.attr($.typer.options.typerDataAttr) === "undefined") {
+        return;
+      }
+
+      typeWithAttribute($e);
+      setInterval(function () {
+        typeWithAttribute($e);
+      }, typerInterval());
+    });
+  };
+
+  $.fn.typeTo = function (newString) {
+    var
+      $e = $(this),
+      currentText = $e.text(),
+      i = 0,
+      j = 0;
+
+    if (currentText === newString) {
+      console.log("Our strings our equal, nothing to type");
+      return $e;
+    }
+
+    if (currentText !== $e.html()) {
+      console.error("Typer does not work on elements with child elements.");
+      return $e;
+    }
+
+    $e.data('typing', true);
+
+    while (currentText.charAt(i) === newString.charAt(i)) {
+      i++;
+    }
+
+    while (currentText.rightChars(j) === newString.rightChars(j)) {
+      j++;
+    }
+
+    newString = newString.substring(i, newString.length - j + 1);
+
+    $e.data({
+      oldLeft: currentText.substring(0, i),
+      oldRight: currentText.rightChars(j - 1),
+      leftStop: i,
+      rightStop: currentText.length - j,
+      primaryColor: $e.css('color'),
+      backgroundColor: $e.css('background-color'),
+      text: newString
+    });
+
+    highlight($e);
+
+    return $e;
+  };
+
+  //-- Helper methods. These can one day be customized further to include things like ranges of delays.
+
+  getHighlightInterval = function () {
+    return $.typer.options.highlightSpeed;
+  };
+
+  getTypeInterval = function () {
+    return $.typer.options.typeSpeed;
+  },
+
+  clearDelay = function () {
+    return $.typer.options.clearDelay;
+  },
+
+  typeDelay = function () {
+    return $.typer.options.typeDelay;
+  };
+
+  typerInterval = function () {
+    return $.typer.options.typerInterval;
+  };
+})(jQuery);
+
+
+
+(function($)  {
+  //On scroll, change navbar to fixed to absolute
+  var fixNav = function() {
+    var $navbar = $('.header');
+    var fixStart = $('.vertical-offset').offset().top;
+    var pos = $(window).scrollTop();
+    if ($navbar.hasClass('header__absolute') && pos >= fixStart)  {
+      $navbar.removeClass('header__absolute').addClass('header__fixed');
+    }
+    else if ($navbar.hasClass('header__fixed') && pos < fixStart) {
+      $navbar.removeClass('header__fixed').addClass('header__absolute');
+    }
+  }
+  //change active link on scroll
+  var changeActive = function() {
+    var offsets;
+    var $navigation = $('.header--navigation .header--link');
+    var $navbar = $('.header');
+    try {      
+      offsets = {
+        work: $('#projects').offset().top,
+        about: $('#about').offset().top - $navbar.outerHeight(),
+        contact: $('#contact').offset().top - $navbar.outerHeight()
+      }
+    }
+    catch(err)  {
+      return;
+    }
+    var pos = $(window).scrollTop();
+    if (pos >= offsets.work && pos < offsets.about) {
+      $navigation.filter('[href*="#projects"]').addClass('active');
+      $navigation.filter(':not([href*="#projects"])').removeClass('active');
+    }
+    else if (pos >= offsets.about && pos < offsets.contact) {
+      $navigation.filter('[href*="#about"]').addClass('active');
+      $navigation.filter(':not([href*="#about"])').removeClass('active');
+    }
+    else if (pos >= offsets.contact) {
+      $navigation.filter('[href*="#contact"]').addClass('active');
+      $navigation.filter(':not([href*="#contact"])').removeClass('active');
+    }
+    else  {
+      $navigation.removeClass('active');
+    }
+  }
+  //Change titles
+  var titleNum = 0;
+  var buttonNum = 0;
+  $.typer.options.typeSpeed = 50;
+  var changeTitle = function() {
+    var titles = ['a Bay Area based designer and developer.',
+      'a maker at UC Berkeley.',
+      "and I'm a pen tool addict.",
+      'a lorem ipsum dolor sit amet.',
+      "and I'm probably pulling an all-nighter.",
+      "and I always feel like a plastic bag."];
+    var sarcasticButtons = [ 'and what else?',
+      'cool story bro',
+      'no1curr',
+      '+$19.99 shipping & handling',
+      'nope.',
+      'try again'
+    ];
+    var $typed = $('.typed');
+    var $button = $('.switcher');
+    var t = Math.floor(Math.random() * titles.length);
+    var b = Math.floor(Math.random() * sarcasticButtons.length);
+    if (t != titleNum && b != buttonNum)  {
+      titleNum = t;
+      buttonNum = b;
+      $typed.typeTo(titles[t]);
+      $button.text(sarcasticButtons[b]);
+    }
+    else  {
+      changeTitle();
+    }
+  }
+  $(document).on('click', '.header--link', function(e) {
+    var $navbar = $('.header');
+    var offsets = {
+      projects: 1,
+      about: -.5 * $navbar.outerHeight(),
+      contact: -.5 * $navbar.outerHeight()
+    }
+    var hash = $(this).attr('href').split('#')[1];
+    if ($('#' + hash).length != 0)  {
+      e.preventDefault();
+      $(document.body).animate({
+        scrollTop: $('#' + hash).offset().top + offsets[hash]
+      }, 500);
+      history.pushState(null, null, '#' + hash);
+    }
+  })
+  $(window).scroll(function() {
+    fixNav();
+    changeActive();
+  });
+  $(document).on('click', '.switcher', function() {
+    changeTitle();
+  })
+})(jQuery);
